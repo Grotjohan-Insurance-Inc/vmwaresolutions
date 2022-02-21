@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2021
+  years:  2019, 2022
 
-lastupdated: "2021-10-21"
+lastupdated: "2022-02-18"
 
 subcollection: vmwaresolutions
 
@@ -18,22 +18,22 @@ subcollection: vmwaresolutions
 
 At a high level, you must complete the following three activities to configure HyTrust® DataControl® to use Hyper Protect Crypto Services:
 
-* Deploy and configure Hyper Protect Crypto Services.
-* Create an {{site.data.keyword.cloud}} Service ID.
-* Deploy and configure HyTrust DataControl.
+* Deploy and configure Hyper Protect Crypto Services
+* Create an {{site.data.keyword.cloud}} Service ID
+* Deploy and configure HyTrust DataControl
 
 Detailed instructions for each of these activities are contained within the product information websites. The following information gives an overview of the activities with links to the more detailed step-by-step instructions.
 
 ## Hyper Protect Crypto Services
 {: #htdc-hpcs-deployment-hpcs}
 
-* Provision an IBM HPCS instance - [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision)
+* Provision an IBM HPCS instance - [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision).
 * Set up the IBM HPCS environment.
    * Verify API endpoint.
    * Set up CLI - Install the {{site.data.keyword.cloud_notm}} CLI, if not already installed. For more information, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
    * Install TKE plug-in - Using the CLI, log in and install the Trusted Key Entry plug-in, `ibmcloud plugin install tke`.
    * Set up local directory for key files - On your local workstation, create a directory for the primary key part files and signature key part files. The directory is stored in the variable CLOUDTKEFILES.
-* Manage crypto units in a service instance:
+* Manage crypto units in a service instance.
    * Display assigned crypto units.
    * Add crypto units - Using the CLI, select the crypto unit so that you can perform operations against it.
 * Load primary key - To create and load a primary key into a primary key register, create a signature key so that you can sign the operation of creating the primary key.

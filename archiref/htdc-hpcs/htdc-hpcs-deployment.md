@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2022
 
-lastupdated: "2022-02-18"
+lastupdated: "2022-04-17"
 
 subcollection: vmwaresolutions
 
@@ -16,11 +16,11 @@ subcollection: vmwaresolutions
 # Deployment
 {: #htdc-hpcs-deployment}
 
-At a high level, you must complete the following three activities to configure HyTrust® DataControl® to use Hyper Protect Crypto Services:
+At a high level, you must complete the following three activities to configure Entrust DataControl® to use Hyper Protect Crypto Services:
 
 * Deploy and configure Hyper Protect Crypto Services
 * Create an {{site.data.keyword.cloud}} Service ID
-* Deploy and configure HyTrust DataControl
+* Deploy and configure Entrust DataControl
 
 Detailed instructions for each of these activities are contained within the product information websites. The following information gives an overview of the activities with links to the more detailed step-by-step instructions.
 
@@ -61,7 +61,7 @@ Detailed instructions for each of these activities are contained within the prod
 | Parameter                           | Example                          |
 | ----------------------------------- | -------------------------------- |
 | Name                                | HPCS01                           |
-| Description                         | For HyTrust and HPCS             |
+| Description                         | For Entrust and HPCS             |
 | Group                               | Public Access                    |
 | Access policy - Services            | Hyper Protect Crypto Services    |
 | Access policy - Region              | Frankfurt                        |
@@ -69,18 +69,18 @@ Detailed instructions for each of these activities are contained within the prod
 | Access policy - Platform access     | Viewer                           |
 | Access policy - Service access      | Reader                           |
 | API Key - Name                      | HPCSAPI01                        |
-| API Key - Description               | For HyTrust and HPCS             |
+| API Key - Description               | For Entrust and HPCS             |
 {: caption="Table 1. Service ID example" caption-side="top"}
 
 Copy the API key or click Download to save it. You cannot view this API key again and you cannot retrieve it.
 
-## HyTrust DataControl
+## Entrust DataControl
 {: #htdc-hpcs-deployment-htdc}
 
-* Order HyTrust DataControl - For more information, see [Ordering HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_ordering).
-* Update static routes on the HTDC VMs - For more information, see [Managing HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtdc).
-* Configure the customer ESG to use SNAT to allow communication between VMs to be encrypted connected to the NSX overlay networks and the HyTrust DataControl virtual machines, which are connected to the {{site.data.keyword.cloud_notm}} underlay network. For more information, see [Add a SNAT rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-BEF4D960-5F8A-4DE5-84F6-0160DF916FDA.html){: external} and [Add a firewall rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-C7A0093A-4AFA-47EC-9187-778BDDAD1C65.html){: external}.
-* Configure HTDC - For more information, see [HyTrust DataControl Administration Guide](https://docs.hytrust.com/DataControl/Admin_Guide-4.0/Content/OLH-Files/Admin-Guide.htm){: external}.
+* Order Entrust DataControl - For more information, see [Ordering Entrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_ordering).
+* Update static routes on the HTDC VMs - For more information, see [Managing Entrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtdc).
+* Configure the customer ESG to use SNAT to allow communication between VMs to be encrypted connected to the NSX overlay networks and the Entrust DataControl virtual machines, which are connected to the {{site.data.keyword.cloud_notm}} underlay network. For more information, see [Add a SNAT rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-BEF4D960-5F8A-4DE5-84F6-0160DF916FDA.html){: external} and [Add a firewall rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-C7A0093A-4AFA-47EC-9187-778BDDAD1C65.html){: external}.
+* Configure Entrust DataControl - For more information, see [Entrust DataControl](https://www.entrust.com/-/media/documentation/datasheets/datacontrol-ds.pdf){: external}.
    * Initializing the KeyControl™ webGUI.
    * Authenticating New KeyControl Nodes.
    * Creating a Cloud Admin User Account.
@@ -94,10 +94,10 @@ Copy the API key or click Download to save it. You cannot view this API key agai
 | HPCS Root Key - The Key ID in the IBM HPCS server to be used for generating a KEK. This value is optional. If you do not include the root key, then KeyControl creates one in HPCS. | `121b4f6c-8147-4194-b9c4-367f33fd8555` |
 {: caption="Table 2. Cloud VM Set example" caption-side="top"}
 
-* Install the Policy Agent - The HyTrust DataControl Policy Agent is a software module that runs on Microsoft® Windows® and Linux® operating systems, and which provides encryption of virtual disks and individual files. When a user attempts to access an encrypted disk, the Policy Agent queries HTKC to validate the request, and returns the information to the user if HTKC authorizes the request. A Policy Agent must be installed in each VM, and on each disk, to be encrypted with HTDC.
+* Install the Policy Agent - The Entrust DataControl Policy Agent is a software module that runs on Microsoft® Windows® and Linux® operating systems, and which provides encryption of virtual disks and individual files. When a user attempts to access an encrypted disk, the Policy Agent queries Entrust DataControl to validate the request, and returns the information to the user if Entrust DataControl authorizes the request. A Policy Agent must be installed in each VM, and on each disk, to be encrypted with HTDC.
 
 ## Related links
 {: #htdc-hpcs-deployment-related}
 
 *  [Getting started with {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
-*  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)
+*  [Entrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)

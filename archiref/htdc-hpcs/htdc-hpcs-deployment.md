@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2022
 
-lastupdated: "2022-04-17"
+lastupdated: "2022-06-20"
 
 subcollection: vmwaresolutions
 
@@ -50,7 +50,7 @@ Detailed instructions for each of these activities are contained within the prod
 * Create a root key - IBM HPCS uses the recommended envelope encryption mechanism of taking a key that is used to encrypt data, the data encryption key or DEK, and encrypting the key itself with a root key. This root key never leaves the HSM.
    * Using the {{site.data.keyword.cloud_notm}} portal, view the {{site.data.keyword.cloud_notm}} resources, and find your IBM HPCS instance.
    * Click **Add Key** and then generate a new root key.
-   * Review [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys) for more information of this step   
+   * Review [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys) for more information of this step.
 * Create a standard key - Perform this operation to [create a standard key](/docs/hs-crypto?topic=hs-crypto-create-standard-keys).
 
 ## Service ID
@@ -70,7 +70,7 @@ Detailed instructions for each of these activities are contained within the prod
 | Access policy - Service access      | Reader                           |
 | API Key - Name                      | HPCSAPI01                        |
 | API Key - Description               | For Entrust and HPCS             |
-{: caption="Table 1. Service ID example" caption-side="top"}
+{: caption="Table 1. Service ID example" caption-side="bottom"}
 
 Copy the API key or click Download to save it. You cannot view this API key again and you cannot retrieve it.
 
@@ -78,7 +78,7 @@ Copy the API key or click Download to save it. You cannot view this API key agai
 {: #htdc-hpcs-deployment-htdc}
 
 * Order Entrust DataControl - For more information, see [Ordering Entrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_ordering).
-* Update static routes on the HTDC VMs - For more information, see [Managing Entrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtdc).
+* Update static routes on the Entrust DataControl VMs - For more information, see [Managing Entrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtdc).
 * Configure the customer ESG to use SNAT to allow communication between VMs to be encrypted connected to the NSX overlay networks and the Entrust DataControl virtual machines, which are connected to the {{site.data.keyword.cloud_notm}} underlay network. For more information, see [Add a SNAT rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-BEF4D960-5F8A-4DE5-84F6-0160DF916FDA.html){: external} and [Add a firewall rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-C7A0093A-4AFA-47EC-9187-778BDDAD1C65.html){: external}.
 * Configure Entrust DataControl - For more information, see [Entrust DataControl](https://www.entrust.com/-/media/documentation/datasheets/datacontrol-ds.pdf){: external}.
    * Initializing the KeyControl™ webGUI.
@@ -92,9 +92,9 @@ Copy the API key or click Download to save it. You cannot view this API key agai
 | HPCS API Key - The API key to be used to connect to the IBM HPCS server. The Service ID API Key.  | `rsC_SawDQ0GEOGSjsTXruArwQ9fC73WKv-87dVVTdf_i` |
 | HPCS Instance ID - The instance ID for your IBM HPCS server. Available from the Manage Instance web page on the {{site.data.keyword.cloud_notm}} portal. | `5e03d770-558d-4699-a7c6-8c98a17f5f5a` |
 | HPCS Root Key - The Key ID in the IBM HPCS server to be used for generating a KEK. This value is optional. If you do not include the root key, then KeyControl creates one in HPCS. | `121b4f6c-8147-4194-b9c4-367f33fd8555` |
-{: caption="Table 2. Cloud VM Set example" caption-side="top"}
+{: caption="Table 2. Cloud VM Set example" caption-side="bottom"}
 
-* Install the Policy Agent - The Entrust DataControl Policy Agent is a software module that runs on Microsoft® Windows® and Linux® operating systems, and which provides encryption of virtual disks and individual files. When a user attempts to access an encrypted disk, the Policy Agent queries Entrust DataControl to validate the request, and returns the information to the user if Entrust DataControl authorizes the request. A Policy Agent must be installed in each VM, and on each disk, to be encrypted with HTDC.
+* Install the Policy Agent - The Entrust DataControl Policy Agent is a software module that runs on Microsoft® Windows® and Linux® operating systems, and which provides encryption of virtual disks and individual files. When a user attempts to access an encrypted disk, the Policy Agent queries Entrust DataControl to validate the request, and returns the information to the user if Entrust DataControl authorizes the request. A Policy Agent must be installed in each VM, and on each disk, to be encrypted with Entrust DataControl.
 
 ## Related links
 {: #htdc-hpcs-deployment-related}

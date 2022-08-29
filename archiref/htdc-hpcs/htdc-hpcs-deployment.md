@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2022
 
-lastupdated: "2022-06-20"
+lastupdated: "2022-07-14"
 
 subcollection: vmwaresolutions
 
@@ -15,6 +15,9 @@ subcollection: vmwaresolutions
 
 # Deployment
 {: #htdc-hpcs-deployment}
+
+New installations of Entrust DataControl® (formerly known as HyTrust DataControl) are no longer supported for new or existing deployments of vCenter Server® instances. You can still use or delete existing Entrust DataControl installations on your existing instances.
+{: deprecated}
 
 At a high level, you must complete the following three activities to configure Entrust DataControl® to use Hyper Protect Crypto Services:
 
@@ -77,10 +80,10 @@ Copy the API key or click Download to save it. You cannot view this API key agai
 ## Entrust DataControl
 {: #htdc-hpcs-deployment-htdc}
 
-* Order Entrust DataControl - For more information, see [Ordering Entrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_ordering).
-* Update static routes on the Entrust DataControl VMs - For more information, see [Managing Entrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtdc).
+* Order Entrust DataControl.
+* Update static routes on the Entrust DataControl VMs. For more information, see [Managing Entrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-managing-entrust-dc).
 * Configure the customer ESG to use SNAT to allow communication between VMs to be encrypted connected to the NSX overlay networks and the Entrust DataControl virtual machines, which are connected to the {{site.data.keyword.cloud_notm}} underlay network. For more information, see [Add a SNAT rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-BEF4D960-5F8A-4DE5-84F6-0160DF916FDA.html){: external} and [Add a firewall rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-C7A0093A-4AFA-47EC-9187-778BDDAD1C65.html){: external}.
-* Configure Entrust DataControl - For more information, see [Entrust DataControl](https://www.entrust.com/-/media/documentation/datasheets/datacontrol-ds.pdf){: external}.
+* Configure Entrust DataControl. For more information, see [Entrust DataControl](https://www.entrust.com/-/media/documentation/datasheets/datacontrol-ds.pdf){: external}.
    * Initializing the KeyControl™ webGUI.
    * Authenticating New KeyControl Nodes.
    * Creating a Cloud Admin User Account.
@@ -100,4 +103,4 @@ Copy the API key or click Download to save it. You cannot view this API key agai
 {: #htdc-hpcs-deployment-related}
 
 *  [Getting started with {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
-*  [Entrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)
+*  [Entrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-entrust-dc_considerations)
